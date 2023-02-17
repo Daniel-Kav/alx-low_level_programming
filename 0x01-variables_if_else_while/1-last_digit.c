@@ -1,18 +1,31 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
-#include <ctype.h>
+/* more headers goes there */
 /**
- * main - prints the lower case of the alphabet
+ * main -prints last digit of random number,showing >5,<6,=0
  *
  * Return: 0, if succesful
  */
 int main(void)
 {
-	char lc;
+	int n;
 
-	for (lc = 'a' ; lc <= 'z' ; lc++)
+	/*code generates random number*/
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+
+	if (n % 10  > 5)
 	{
-		putchar(lc);
+		printf("Last digit of %d is %d and is greater than 5\n", n, n % 10);
 	}
-	putchar('\n');
+	if (n % 10 == 0)
+	{
+		printf("Last digit of %d is %d and is 0\n", n, n % 10);
+	}
+	if (n % 10 < 6  && n % 10 != 0)
+	{
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, n % 10);
+	}
 	return (0);
 }}
