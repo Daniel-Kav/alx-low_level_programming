@@ -1,38 +1,33 @@
-#include "main.h"
+nes (42 sloc)  619 Bytes
+
+#include <stdio.h>
 
 /**
- * print_number - function declaration
- * @n: the integer
- * Description: prints the arguement n
- * Return: void
+ * main - Finds and prints the largest prime
+ *        factor of the number 612852475143.
+ *
+ * Return: Always 0.
  */
-
-void print_number(int n);
-
-/**
- * print_number - function definition
- * @n: the integer to print
- * Description: prints integer n
- * Return: void
- */
-
-void print_number(int n)
+int main(void)
 {
-	unsigned int number;
+	long pf = 612852475143, div;
 
-	if (n < 0)
+	while (div < (pf / 2))
 	{
-		number = -n;
-		_putchar('-');
-	}
-	else
-	{
-		number = n;
+		if ((pf % 2) == 0)
+		{
+			pf /= 2;
+			continue;
+		}
+
+		for (div = 3; div < (pf / 2); div += 2)
+		{
+			if ((pf % div) == 0)
+				pf /= div;
+		}
 	}
 
-	if (number / 10)
-	{
-		print_number(number / 10);
-	}
-	_putchar((number % 10) + '0');
+	printf("%ld\n", pf);
+
+	return (0);
 }
