@@ -1,5 +1,3 @@
-nes (42 sloc)  619 Bytes
-
 #include <stdio.h>
 
 /**
@@ -31,3 +29,19 @@ int main(void)
 
 	return (0);
 }
+/* or
+ * int main(void)
+ * {
+ * 	long int x = 612852475143;
+ * 	long int p;
+ *
+ * 	for (p = 2; p < x; p++)
+ * 	{
+ * 		if (x % p == 0)
+ * 		{
+ * 			x = x / p;
+ * 		}
+ * 	}
+ * 	printf("%ld\n", p);
+ * 	return (0);
+ * }
