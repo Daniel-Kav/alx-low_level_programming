@@ -1,6 +1,7 @@
 #include "main.h"
 
 /**
+ *dan code
  * print_binary - Prints a binary notation of a number.
  * @n: number to be printed in binary.
  */
