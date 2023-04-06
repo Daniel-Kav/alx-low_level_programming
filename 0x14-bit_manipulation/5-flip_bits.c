@@ -5,20 +5,22 @@
  *             flipped to get from one number to another.
  * @n: The number.
  * @m: The number to flip n to.
- *
+ 
+ 
+ *dan coded this.
  * Return: number of bits to flip to get from n to m.
  */
 
-unsigned int flip_bits(unsigned long int n, unsigned long int m)
+unsigned int flip_bits(unsigned long int x, unsigned long int y)
 {
 	unsigned long int btw, check;
-	unsigned int num, i;
+	unsigned int num, k;
 
 	check = 1;
-	btw = n ^ m;
+	btw = x ^ y;
 	num = 0;
 
-	for (i = 0; i < (sizeof(unsigned long int) * 8); i++)
+	for (k = 0; k < (sizeof(unsigned long int) * 8); k++)
 	{
 		if (check == (btw & check))
 			num++;

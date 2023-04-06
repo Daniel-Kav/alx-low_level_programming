@@ -4,19 +4,19 @@
  * clear_bit - sets the value of a bit to 0 at a given index.
  * @n: pointer to bit number to set
  * @index: index at which to set bit value
- *
+ *dan coded this.
  * Return: -1 if an error Else 1
  */
 
-int clear_bit(unsigned long int *n, unsigned int index)
+int clear_bit(unsigned long int *x, unsigned int index)
 {
-	unsigned long int i;
+	unsigned long int k;
 
 	if (index > (sizeof(unsigned long int) * 8 - 1))
 		return (-1);
 
-	i = ~(1 << index);
-	*n = *n & i;
+	k = ~(1 << index);
+	*x = *x & k;
 
 	return (1);
 }

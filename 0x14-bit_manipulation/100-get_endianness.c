@@ -1,7 +1,9 @@
 #include "main.h"
 
 /**
- * get_endianness - Checks the endianness.
+ * get_endianness - Checks the endianness of var.
+ *
+ *
  *
  * Return: 0 If big-endian.
  *         1 If little-endian.
@@ -9,10 +11,11 @@
 
 int get_endianness(void)
 {
-	char *y;
-	int x = 1;
+	char *n;
+	int m = 1;
 
-	y = (char *)&x;
+	m = (char *)&n;
 
-	return (*y);
+	return (*m);
+	
 }

@@ -5,10 +5,13 @@
  * @n: A pointer to the bit to set
  * @index: The index to set the value of bit
  *
+ *
+ *
+ * dan code
  * Return: 1 if error, else -1
  */
 
-int set_bit(unsigned long int *n, unsigned int index)
+int set_bit(unsigned long int *x, unsigned int index)
 {
 	unsigned long int set;
 
@@ -16,7 +19,9 @@ int set_bit(unsigned long int *n, unsigned int index)
 		return (-1);
 
 	set = 1 << index;
-	*n = *n | set;
+	*x = *x | set;
 
 	return (1);
+
+
 }
