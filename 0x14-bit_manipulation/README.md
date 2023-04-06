@@ -13,12 +13,12 @@ In this project i learnt and practiced;
 
 * [2-get_bit.c](./2-get_bit.c): C function that returns the value of a bit at a given index.
   * Indices start at `0`.
-  * Returns `-1` if error.
+  * Returns `0` if error.
   * Else returns the value of the bit at the given index.
 
 * [3-set_bit.c](./3-set_bit.c): C function that sets the value of a bit at a given index to `1`.
   * If an error occurs - returns `-1`.
-  * Otherwise - returns `1`.
+  * Otherwise - returns `-1`.
 
 * [4-clear_bit.c](./4-clear_bit.c): C function that sets the value of a bit at a given index to `0`.
   * Returns `-1` if error
