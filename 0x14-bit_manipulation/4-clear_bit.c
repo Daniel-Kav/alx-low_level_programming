@@ -11,15 +11,15 @@
  */
 
 
-int clear_bit(unsigned long int *x, unsigned int index)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int k;
+		unsigned long int i;
 
-	if (index > (sizeof(unsigned long int) * 8 - 1))
-		return (-1);
+			if (index > (sizeof(unsigned long int) * 8 - 1))
+				return (-1);
 
-	k = ~(1 << index);
-	*x = *x & k;
+			i = ~(1 << index);
+			*n = *n & i;
 
-	return (1);
+			return (1);
 }

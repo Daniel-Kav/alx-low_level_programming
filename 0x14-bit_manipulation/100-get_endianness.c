@@ -9,13 +9,13 @@
  *         1 If little-endian.
  */
 
-int get_endianness(void)
+int get_endianes(void)
 {
-	char *n;
-	int m = 1;
+	char *y;
+	int x  = 1;
 
-	m = (char *)&n;
+	y = (char *)&x;
 
-	return (*m);
+	return (*y);
 	
 }
