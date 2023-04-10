@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- *dan code
  * print_binary - Prints a binary notation of a number.
  * @n: number to be printed in binary.
+ * dan
  */
 
-void print_binary(unsigned long int t)
+void print_binary(unsigned long int n)
 {
-	if (t > 1)
-		print_binary(t >> 1);
+		if (n > 1)
+			print_binary(n >> 1);
 
-	_putchar((t & 1) + '0');
+		_putchar((n & 1) + '0');
 }
